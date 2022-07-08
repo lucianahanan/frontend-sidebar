@@ -1,0 +1,223 @@
+/*---------- resets ----------*/
+* {
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  margin: 0;
+  padding-block: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 200ms;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+img {
+  border: 0;
+}
+
+/*---------- globals ----------*/
+:root {
+  --background: #dce4e3;
+  --primary: #18c29c;
+  --secondary: #8ed7c6;
+  --text: #084236;
+  --white: #ffffff;
+}
+
+body {
+  align-items: center;
+  background-color: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  color: var(--text);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 5vw, 2.4rem);
+  font-weight: 600;
+  line-height: 3.6rem;
+  margin-bottom: 1rem;
+}
+
+/*---------- body --------------------------------------------------*/
+body {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+}
+body.collapsed {
+  grid-template-columns: 7.8rem 1fr;
+}
+
+/*---------- aside --------------------------------------------------*/
+aside {
+  background-color: var(--primary);
+  height: 100%;
+  min-width: 7.8rem;
+  position: relative;
+  width: 25rem;
+  transition: width 200ms linear;
+}
+aside.collapsed {
+  width: 7.8rem;
+}
+aside header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem 1.4rem 0 2.8rem;
+}
+aside header .menu {
+  cursor: pointer;
+  transition: 400ms;
+}
+aside header .menu:hover {
+  filter: invert(1) sepia(5) saturate(160%) hue-rotate(122deg) brightness(96%) contrast(87%);
+}
+aside header .logo {
+  transition: 400ms;
+}
+aside header .logo.collapsed {
+  display: none;
+}
+aside header .logo:hover {
+  filter: invert(1) sepia(5) saturate(160%) hue-rotate(122deg) brightness(96%) contrast(87%);
+}
+aside ul {
+  padding: 2.6rem 1.4rem;
+}
+aside ul li {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 5rem;
+  padding-left: 1.4rem;
+}
+aside ul li img {
+  margin-right: 1.3rem;
+  vertical-align: middle;
+}
+aside ul li span {
+  -moz-transition: width 400ms linear;
+  -ms-transition: width 400ms linear;
+  -o-transition: width 400ms linear;
+  -webkit-transition: width 400ms linear;
+  overflow: hidden;
+  transition: width 400ms linear;
+  width: 100%;
+}
+aside ul li span.collapsed {
+  width: 0%;
+}
+aside ul li:hover {
+  background-color: var(--secondary);
+  border-radius: 12px;
+}
+aside ul li:hover.collapsed {
+  background-color: var(--background);
+}
+aside ul li.current {
+  background-color: var(--background);
+  border-radius: 12px;
+}
+aside #user {
+  align-items: center;
+  background-color: var(--secondary);
+  bottom: 0;
+  display: flex;
+  height: 6rem;
+  padding-top: 1.4rem;
+  padding: 1.4rem;
+  position: absolute;
+  width: 100%;
+}
+aside #user .title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+aside #user .title.collapsed {
+  display: none;
+}
+aside #user .title span {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+aside #user .user {
+  border-radius: 1.2rem;
+  height: 4.5rem;
+  margin-right: 0.9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 4.5rem;
+}
+aside #user .user:hover {
+  outline: 2px solid var(--text);
+}
+aside #user .user.collapsed {
+  display: none;
+}
+aside #user .logout {
+  bottom: 1.8rem;
+  cursor: pointer;
+  height: 2.4rem;
+  position: absolute;
+  right: 0;
+  right: 1.4rem;
+  transition: 400ms;
+  width: 2.4rem;
+}
+aside #user .logout:hover {
+  transform: translateX(-10px);
+}
+aside #user .logout.collapsed {
+  right: 2.8rem;
+}
+
+/*---------- main --------------------------------------------------*/
+main {
+  display: flex;
+  height: 100vh;
+  margin-right: 0 auto;
+  padding: 2.4rem 1.4rem;
+  width: 100%;
+}
+
+/*---------- section --------------------------------------------------*/
+section {
+  display: none;
+}
+section.show {
+  display: block;
+}

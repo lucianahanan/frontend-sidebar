@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?display=swap&family=Poppins:wght@400;500" as="style">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Poppins:wght@400;500">
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <aside>
+      <header>
+        <a class="logo" href="#"><img src="./assets/logo.svg" alt="Logo VET." /></a>
+        <img class="menu" src="./assets/menu.svg" alt="Menu" onclick="toggleCollapsedMenu()" />
+      </header>
+
+      <ul class="menuitems">
+        <li id="item-search" onclick="toggleSection('search', this.id)"><img src="./assets/search.svg" alt="Search"><span>Search</span></li>
+        <li id="item-dashboard" onclick="toggleSection('dashboard', this.id)"><img src="./assets/grid.svg" alt="Dashboard"><span>Dashboard</span></li>
+        <li id="item-pets" onclick="toggleSection('pets', this.id)"><img src="./assets/pet.svg" alt="Pets"><span>Pets</span></li>
+        <li id="item-clients" onclick="toggleSection('clients', this.id)"><img src="./assets/user.svg" alt="Clients"><span>Clients</span></li>
+        <li id="item-vets" onclick="toggleSection('vets', this.id)"><img src="./assets/vet.svg" alt="Vets"><span>Vets</span></li>
+        <li id="item-settings" onclick="toggleSection('settings', this.id)"><img src="./assets/settings.svg" alt="Settings"><span>Settings</span></li>
+      </ul>
+
+      <section id="user">
+        <a href="#"><img class="user" src="./assets/photo.jpg" alt="Profile"></a>
+        <p class="title">Eleanor Smith<br><span>Veterinary</span></p>
+        <img class="logout" src="./assets/log-out.svg" alt="User Logout">
+      </section>
+    </aside>
+    <main>
+      <section id="search">
+        <h1>Search</h1>
+      </section>
+
+      <section id="dashboard" class="show">
+        <h1>Dasboard</h1>
+      </section>
+
+      <section id="pets">
+        <h1>Pets</h1>
+      </section>
+
+      <section id="clients">
+        <h1>Clients</h1>
+      </section>
+
+      <section id="vets">
+        <h1>Vets</h1>
+      </section>
+
+      <section id="settings">
+        <h1>Settings</h1>
+      </section>
+    </main>
+
+</body>
+</html>
